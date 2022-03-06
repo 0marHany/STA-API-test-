@@ -9,7 +9,7 @@ const addLink = async (req, res) => {
 }
 
 const getLinkSoftware = async (req, res) => {
-    const get = await speedModel.find({});
+    const get = await linkModel.find({});
     res.json({ message: "Done", get });
 }
 
@@ -21,7 +21,7 @@ const updateLink = async (req, res) => {
 }
 
 const deleteLink = async (req, res) => {
-    const deleted = await speedModel.deleteMany({
+    const deleted = await linkModel.deleteMany({
         _id: req.params.id
     })
     res.json({ message: "Succesful", deleted })

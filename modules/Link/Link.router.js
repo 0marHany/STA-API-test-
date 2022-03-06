@@ -1,4 +1,7 @@
-const { addLink, updateLink, deleteLink, getLinkSoftware } = require('./controller/Link');
+const { addLink,
+    updateLink,
+    deleteLink,
+    getLinkSoftware } = require('./controller/link');
 
 
 const router = require('express').Router();
