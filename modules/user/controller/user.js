@@ -24,9 +24,6 @@ const addUser = async (req, res, next) => {
     }
 }
 
-/*
-
-*/
 
 const authorization = async (req, res) => {
     const { email, password } = req.body;
