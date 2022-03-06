@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const {
     userRouter,
     // TestRunRouter,
-    // speedRouter,
+    speedRouter,
     //     websiteRouter,
     linkRouter
 } = require('./router/allRouter');
@@ -16,7 +16,7 @@ app.use(cors({ origin: '*' }))
 app.use(
     userRouter,
     // TestRunRouter,
-    // speedRouter,
+    speedRouter,
     //     websiteRouter,
     linkRouter
 )
