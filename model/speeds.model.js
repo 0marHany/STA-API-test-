@@ -44,31 +44,31 @@ const userSchema = mongoose.Schema({
         required: true
     },
     LH_TBT: {
-        type: Number,
+        type: String,
         required: true
     },
     LH_SI: {
-        type: Number,
+        type: String,
         required: true
     },
     LH_FCP: {
-        type: Number,
+        type: String,
         required: true
     },
     LH_TTI: {
-        type: Number,
+        type: String,
         required: true
     },
     LH_CLS: {
-        type: Number,
+        type: String,
         required: true
     },
     LH_LCP: {
-        type: Number,
+        type: String,
         required: true
     },
     PR_Precentage: {
-        type: Number,
+        type: String,
         required: true
     }
 })
