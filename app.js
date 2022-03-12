@@ -20,9 +20,6 @@ app.use(
     //     websiteRouter,
     linkRouter
 )
-mongoose.connect('mongodb+srv://omar:12345@cluster0.9f7gc.mongodb.net/project')
 app.listen(process.env.PORT || 5000)
 
 
-// mongodb+srv://omar:12345@cluster0.9f7gc.mongodb.net/test
-//mongodb+srv://omarhany:Omar@123@cluster0.bvmon.mongodb.net/test
