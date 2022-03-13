@@ -46,7 +46,7 @@ const addTest = async (req, res) => {
 }
 const getAlltest = async (req, res) => {
     try {
-        const get = await speedsModel.find({});
+        const get = await speedsModel.findOne({}, {}, { sort: { 'createdAt': -1 } });
         res.json({ message: "Done", get });
     } catch (error) {
         res.json({ message: "error", error });
