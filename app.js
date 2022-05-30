@@ -9,8 +9,8 @@ const {
 } = require('./router/allRouter');
 const app = express();
 const cors = require('cors');
+require("dotenv").config();
 const { createPdf } = require('./common/CreatePDF');
-const linksModel = require('./model/links.model');
 const speedsModel = require('./model/speeds.model');
 
 app.use(express.json())
@@ -32,4 +32,5 @@ app.get('/generatePdf', async (req, res) => {
     res.end();
 })
 
+mongoose.connect(process.env.MONGOO_CONNECTION);
 app.listen(process.env.PORT || 5000)
