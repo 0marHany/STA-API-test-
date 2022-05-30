@@ -43,7 +43,7 @@ function generateCustomerInformation(doc, invoice) {
         .text(invoice.PR_Precentage, 150, customerInformationTop)
         .font("Helvetica")
         .text("Test Date:", 50, customerInformationTop + 15)
-        .text(formatDate(new Date()), 150, customerInformationTop + 15)
+        .text(new Date(invoice.createdAt).toDateString(), 150, customerInformationTop + 15)
         .moveDown();
 
     generateHr(doc, 252);
