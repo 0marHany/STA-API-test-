@@ -31,5 +31,5 @@ app.get('/generatePdf', async (req, res) => {
     createPdf(invoice, "Test.pdf");
     res.end();
 })
-mongoose.connect('mongodb+srv://omar:12345@cluster0.9f7gc.mongodb.net/project')
+
 app.listen(process.env.PORT || 5000)
