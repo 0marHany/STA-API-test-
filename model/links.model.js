@@ -2,9 +2,13 @@
 const mongoose = require('mongoose')
 
 
-const userSchema = mongoose.Schema({
+const linkSchema = mongoose.Schema({
     link: {
         type: String,
+        required: true
+    },
+    UserData: {
+        type: mongoose.Schema.Types.ObjectId, ref: "user",
         required: true
     }
 }, {
@@ -12,4 +16,4 @@ const userSchema = mongoose.Schema({
 }
 )
 
-module.exports = mongoose.model('link', userSchema)
+module.exports = mongoose.model('link', linkSchema)

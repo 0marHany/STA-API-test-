@@ -1,15 +1,15 @@
 const userRouter = require('../modules/user/user.router');
 
-// const TestRunRouter = require('../modules/Software/routers/TestRun.router');
+// const SecurityRouter = require('../modules/Software/routers/Security.router');
 const speedRouter = require('../modules/Software/routers/speed.router');
-// const websiteRouter = require('../modules/Software/routers/website.router');
+const SEO = require('../modules/Software/routers/SEO.router');
 
 const linkRouter = require('../modules/Link/Link.router');
 
 module.exports = {
     userRouter,
-    // TestRunRouter,
+    // SecurityRouter,
     speedRouter,
-    // websiteRouter
+    SEO,
     linkRouter
 }

@@ -1,15 +1,16 @@
 const linkModel = require('../../../model/links.model');
 
 const addLink = async (req, res) => {
-    const { link } = req.body;
+    const { link, UserData } = req.body;
     const newLink = await linkModel.insertMany({
-        link
+        link,
+        UserData
     });
     res.json({ message: "Done", Link: newLink });
 }
 
 const getLinkSoftware = async (req, res) => {
-    const get = await linkModel.find({});
+    const get = await linkModel.find({}).populate("UserData");
     res.json({ message: "Done", get });
 }
 

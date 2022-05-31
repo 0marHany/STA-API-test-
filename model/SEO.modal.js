@@ -2,82 +2,69 @@
 const mongoose = require('mongoose')
 
 
-const speedSchema = mongoose.Schema({
-    loadingExperince: {
+const SEOSchema = mongoose.Schema({
+    total_traffic: {
+        type: Number,
+        required: true
+    },
+    key_Word: {
+        type: Number,
+        required: true
+    },
+    total_traffic_cost: {
+        type: Number,
+        required: true
+    },
+    backlinks: {
+        type: Number,
+        required: true
+    },
+    keyWord_1: {
         type: String,
         required: true
     },
-    LE_FCP: {
+    keyWord_2: {
         type: String,
         required: true
     },
-    LE_FID: {
+    keyWord_3: {
         type: String,
         required: true
     },
-    LE_CLS: {
+    keyWord_4: {
         type: String,
         required: true
     },
-    LE_LCP: {
+    keyWord_5: {
         type: String,
         required: true
     },
-    OriginLoadingExperince: {
+    keyWord_6: {
         type: String,
         required: true
     },
-    OLE_FCP: {
+    keyWord_7: {
         type: String,
         required: true
     },
-    OLE_FID: {
+    keyWord_8: {
         type: String,
         required: true
     },
-    OLE_CLS: {
+    keyWord_9: {
         type: String,
         required: true
     },
-    OLE_LCP: {
-        type: String,
-        required: true
-    },
-    LH_TBT: {
-        type: String,
-        required: true
-    },
-    LH_SI: {
-        type: String,
-        required: true
-    },
-    LH_FCP: {
-        type: String,
-        required: true
-    },
-    LH_TTI: {
-        type: String,
-        required: true
-    },
-    LH_CLS: {
-        type: String,
-        required: true
-    },
-    LH_LCP: {
-        type: String,
-        required: true
-    },
-    PR_Precentage: {
+    keyWord_10: {
         type: String,
         required: true
     },
     LinkOwner: {
         type: mongoose.Schema.Types.ObjectId, ref: "link",
         required: true
-    }
-}
-    , {
-        timestamps: true
-    })
+    },
+}, {
+    timestamps: true
+})
 
-module.exports = mongoose.model('speed', speedSchema)
+module.exports = mongoose.model('SEO', SEOSchema)

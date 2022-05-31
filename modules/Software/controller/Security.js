@@ -1,5 +1,5 @@
 
-const speedsModel = require("../../../model/speeds.model");
+const SecurityModel = require("../../../model/Security.model");
 
 
 const addTest = async (req, res) => {
@@ -23,7 +23,7 @@ const addTest = async (req, res) => {
         PR_Precentage,
         LinkOwner
     } = req.body;
-    const new_Test = await speedsModel.insertMany({
+    const new_Test = await SecurityModel.insertMany({
 
         loadingExperince,
         LE_FCP,
@@ -48,7 +48,7 @@ const addTest = async (req, res) => {
 }
 const getLasttest = async (req, res) => {
     try {
-        const get = await speedsModel.findOne({}, {}, { sort: { 'createdAt': -1 } }).populate("LinkOwner");
+        const get = await SecurityModel.findOne({}, {}, { sort: { 'createdAt': -1 } }).populate("LinkOwner");
         res.json({ message: "Done", get });
     } catch (error) {
         res.json({ message: "error", error });
@@ -76,7 +76,7 @@ const updateTest = async (req, res) => {
         LH_LCP,
         PR_Precentage
     } = req.body;
-    const Updated = await speedsModel.findByIdAndUpdate({ _id: req.params.id }, {
+    const Updated = await SecurityModel.findByIdAndUpdate({ _id: req.params.id }, {
 
         loadingExperince,
         LE_FCP,
@@ -100,7 +100,7 @@ const updateTest = async (req, res) => {
 }
 
 const deleteTest = async (req, res) => {
-    const deleted = await speedsModel.deleteMany({
+    const deleted = await SecurityModel.deleteMany({
         _id: req.params.id
     })
     res.json({ message: "Succesful", deleted })

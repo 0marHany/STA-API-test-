@@ -8,8 +8,8 @@ const { addLinkSchema, updateLinkSchema } = require('./controller/joi/urlValidat
 
 const router = require('express').Router();
 
-router.post('/addNewlink', validationResult(addLinkSchema), addLink)
-router.get('/getLink', getLinkSoftware)
-router.put('/updatelink/:id', validationResult(updateLinkSchema), updateLink)
-router.delete("/deletelink/:id", deleteLink)
+router.post('/Url', validationResult(addLinkSchema), addLink)
+router.get('/Url', getLinkSoftware)
+router.put('/Url/:id', validationResult(updateLinkSchema), updateLink)
+router.delete("/Url/:id", deleteLink)
 module.exports = router

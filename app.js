@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose')
 const {
     userRouter,
-    // TestRunRouter,
+    // SecurityRouter,
     speedRouter,
-    //     websiteRouter,
+    SEO,
     linkRouter
 } = require('./router/allRouter');
 const app = express();
@@ -19,9 +19,9 @@ app.use(cors({ origin: '*' }))
 // createTables()
 app.use(
     userRouter,
-    // TestRunRouter,
+    // SecurityRouter,
     speedRouter,
-    //     websiteRouter,
+    SEO,
     linkRouter
 )
 
