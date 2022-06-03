@@ -27,7 +27,6 @@ app.use(
 
 app.get('/generatePdf', async (req, res) => {
     const invoice = await speedsModel.findOne({}, {}, { sort: { 'createdAt': -1 } });
-    console.log(invoice);
     createPdf(invoice, "Test.pdf");
     res.end();
 })
