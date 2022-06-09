@@ -7,8 +7,8 @@ const {
 
 const router = require('express').Router();
 
-router.post('/createNewtestSpeed', addTest)
-router.get('/getAllTestSpeed', getLasttest)
-router.put('/updateTestSpeed/:id', updateTest)
-router.delete("/deleteTestSpeed/:id", deleteTest)
+router.post('/Security', addTest)
+router.get('/Security/:id', getLasttest)
+router.put('/Security/:id', updateTest)
+router.delete("/Security/:id", deleteTest)
 module.exports = router

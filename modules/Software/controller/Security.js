@@ -1,48 +1,23 @@
-
 const SecurityModel = require("../../../model/Security.model");
-
 
 const addTest = async (req, res) => {
     const {
-        loadingExperince,
-        LE_FCP,
-        LE_FID,
-        LE_CLS,
-        LE_LCP,
-        OriginLoadingExperince,
-        OLE_FCP,
-        OLE_FID,
-        OLE_CLS,
-        OLE_LCP,
-        LH_TBT,
-        LH_SI,
-        LH_FCP,
-        LH_TTI,
-        LH_CLS,
-        LH_LCP,
-        PR_Precentage,
-        LinkOwner
+        final_score,
+        server_ip,
+        software_found,
+        software_outdated,
+        software_vulnerabil,
+        lib_json,
+        LinkOwner,
     } = req.body;
     const new_Test = await SecurityModel.insertMany({
-
-        loadingExperince,
-        LE_FCP,
-        LE_FID,
-        LE_CLS,
-        LE_LCP,
-        OriginLoadingExperince,
-        OLE_FCP,
-        OLE_FID,
-        OLE_CLS,
-        OLE_LCP,
-        LH_TBT,
-        LH_SI,
-        LH_FCP,
-        LH_TTI,
-        LH_CLS,
-        LH_LCP,
-        PR_Precentage,
-        LinkOwner
+        final_score,
+        server_ip,
+        software_found,
+        software_outdated,
+        software_vulnerabil,
+        lib_json,
+        LinkOwner,
     });
     res.json({ message: "Done", new_Test });
 }
@@ -57,44 +32,22 @@ const getLasttest = async (req, res) => {
 
 const updateTest = async (req, res) => {
     const {
-
-        loadingExperince,
-        LE_FCP,
-        LE_FID,
-        LE_CLS,
-        LE_LCP,
-        OriginLoadingExperince,
-        OLE_FCP,
-        OLE_FID,
-        OLE_CLS,
-        OLE_LCP,
-        LH_TBT,
-        LH_SI,
-        LH_FCP,
-        LH_TTI,
-        LH_CLS,
-        LH_LCP,
-        PR_Precentage
+        final_score,
+        server_ip,
+        software_found,
+        software_outdated,
+        software_vulnerabil,
+        lib_json,
+        LinkOwner,
     } = req.body;
     const Updated = await SecurityModel.findByIdAndUpdate({ _id: req.params.id }, {
-
-        loadingExperince,
-        LE_FCP,
-        LE_FID,
-        LE_CLS,
-        LE_LCP,
-        OriginLoadingExperince,
-        OLE_FCP,
-        OLE_FID,
-        OLE_CLS,
-        OLE_LCP,
-        LH_TBT,
-        LH_SI,
-        LH_FCP,
-        LH_TTI,
-        LH_CLS,
-        LH_LCP,
-        PR_Precentage
+        final_score,
+        server_ip,
+        software_found,
+        software_outdated,
+        software_vulnerabil,
+        lib_json,
+        LinkOwner,
     })
     res.json({ message: "Done", Updated })
 }

@@ -23,17 +23,7 @@ const SecuritySchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    lib_json: [{
-        name: String,
-        version: String,
-        message: String,
-        vulnerabil: [{
-            score: String,
-            cve: String,
-            type: String,
-        },],
-        required: true
-    }],
+    lib_json: [],
     LinkOwner: {
         type: mongoose.Schema.Types.ObjectId, ref: "link",
         required: true
