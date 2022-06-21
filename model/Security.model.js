@@ -1,6 +1,4 @@
-
 const mongoose = require('mongoose')
-
 
 const SecuritySchema = mongoose.Schema({
     final_score: {

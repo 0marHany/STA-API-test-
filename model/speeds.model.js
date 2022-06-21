@@ -1,7 +1,6 @@
 
 const mongoose = require('mongoose')
 
-
 const speedSchema = mongoose.Schema({
     loadingExperince: {
         type: String,

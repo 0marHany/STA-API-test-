@@ -41,7 +41,7 @@ const authorization = async (req, res) => {
             }
         }
     } catch (error) {
-        res.json({ error: error });
+        res.json({ error: error.message });
     }
 }
 
@@ -63,8 +63,6 @@ const deleteUser = async (req, res) => {
 module.exports = {
     addUser,
     updateUser,
-    // getAllUsers,
-    // getUser,
     deleteUser,
     authorization,
 }

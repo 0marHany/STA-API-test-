@@ -6,16 +6,7 @@ const addTest = async (req, res) => {
         key_Word,
         total_traffic_cost,
         backlinks,
-        keyWord_1,
-        keyWord_2,
-        keyWord_3,
-        keyWord_4,
-        keyWord_5,
-        keyWord_6,
-        keyWord_7,
-        keyWord_8,
-        keyWord_9,
-        keyWord_10,
+        keyWord,
         LinkOwner
     } = req.body;
     const new_Test = await SEOModal.insertMany({
@@ -24,26 +15,18 @@ const addTest = async (req, res) => {
         key_Word,
         total_traffic_cost,
         backlinks,
-        keyWord_1,
-        keyWord_2,
-        keyWord_3,
-        keyWord_4,
-        keyWord_5,
-        keyWord_6,
-        keyWord_7,
-        keyWord_8,
-        keyWord_9,
-        keyWord_10,
+        keyWord,
         LinkOwner
     });
     res.json({ message: "Done", new_Test });
 }
 const getLasttest = async (req, res) => {
     try {
+        // const get = await SEOModal.findOne({ LinkOwner: req.params.id }, {}, { sort: { 'createdAt': -1 } }).populate("LinkOwner");
         const get = await SEOModal.findOne({}, {}, { sort: { 'createdAt': -1 } }).populate("LinkOwner");
         res.json({ message: "Done", get });
     } catch (error) {
-        res.json({ message: "error", error });
+        res.json({ error: error.message });
     }
 }
 
@@ -54,16 +37,7 @@ const updateTest = async (req, res) => {
         key_Word,
         total_traffic_cost,
         backlinks,
-        keyWord_1,
-        keyWord_2,
-        keyWord_3,
-        keyWord_4,
-        keyWord_5,
-        keyWord_6,
-        keyWord_7,
-        keyWord_8,
-        keyWord_9,
-        keyWord_10
+        keyWord,
     } = req.body;
     const Updated = await SEOModal.findByIdAndUpdate({ _id: req.params.id }, {
 
@@ -71,16 +45,7 @@ const updateTest = async (req, res) => {
         key_Word,
         total_traffic_cost,
         backlinks,
-        keyWord_1,
-        keyWord_2,
-        keyWord_3,
-        keyWord_4,
-        keyWord_5,
-        keyWord_6,
-        keyWord_7,
-        keyWord_8,
-        keyWord_9,
-        keyWord_10
+        keyWord,
     })
     res.json({ message: "Done", Updated })
 }
